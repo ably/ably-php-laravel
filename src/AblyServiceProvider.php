@@ -4,7 +4,8 @@ namespace Ably\Laravel;
 use Ably\AblyRest;
 use Illuminate\Support\ServiceProvider;
 
-class AblyServiceProvider extends ServiceProvider {
+class AblyServiceProvider extends ServiceProvider
+{
     /**
      * Indicates if loading of the provider is deferred.
      *

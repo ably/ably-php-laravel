@@ -7,7 +7,8 @@ use Ably\AblyRest;
 /**
  * Gets the service provider and acts as a proxy to the returned instance
  */
-class AblyService {
+class AblyService
+{
     private $instance;
 
     public function __construct()
