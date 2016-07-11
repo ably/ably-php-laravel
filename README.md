@@ -1,6 +1,8 @@
 #Ably PHP Laravel Wrapper
 
-This is a Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables.
+[![Build Status](https://travis-ci.org/ably/ably-php-laravel.png)](https://travis-ci.org/ably/ably-php-laravel)
+
+This is a Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
 
 ##Installation
 
@@ -10,7 +12,7 @@ Add this package to your project, with [Composer](https://getcomposer.org/)
 composer require ably/ably-php-laravel
 ```
 
-Add the service provider to `config/app.php` in the `providers` array.
+Add the service provider in `config/app.php` to the `providers` array.
 
 ```php
 Ably\Laravel\AblyServiceProvider::class

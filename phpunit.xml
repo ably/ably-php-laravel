@@ -1,0 +1,7 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="ably-php-laravel">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
