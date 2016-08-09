@@ -1,4 +1,6 @@
 <?php
+use Ably\Http;
+
 class AblyLaravelTest extends Orchestra\Testbench\TestCase
 {
     const TEST_KEY = 'unit.test:key';
@@ -127,5 +129,36 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
         $this->assertInstanceOf(\Ably\Auth::class, $ablySPAuth);
         $this->assertInstanceOf(\Ably\Auth::class, $factoryInstanceAuth);
         $this->assertInstanceOf(\Ably\Auth::class, $factoryInstanceAuth2);
+    }
+
+    public function testAblyFlavourString()
+    {
+        $ablyFactory = App::make('\Ably\Laravel\AblyFactory');
+        $ably = $ablyFactory->make([
+            'key' => self::TEST_KEY,
+            'httpClass' => 'HttpMock',
+        ]);
+
+        $ably->time();
+        $this->assertRegExp('/php-laravel-[0-9]+\.[0-9]+\.[0-9]+/', $ably->http->lastHeaders['X-Ably-Lib']);
+    }
+}
+
+
+class HttpMock extends Http
+{
+    public $lastUrl;
+    public $lastHeaders;
+    
+    public function request($method, $url, $headers = array(), $params = array())
+    {
+        $this->lastUrl = $url;
+        $this->lastHeaders = $headers;
+
+        // mock response to /time
+        return array(
+            'headers' => "HTTP/1.1 200 OK\n",
+            'body' => array(round(microtime(true) * 1000 ), 0),
+        );
     }
 }

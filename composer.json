@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "ably/ably-php": "~0.8",
+        "ably/ably-php": "~0.9",
         "laravel/framework": ">=5.1.0"
     },
     "require-dev": {

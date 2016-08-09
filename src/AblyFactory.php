@@ -34,6 +34,8 @@ class AblyFactory
      */
     protected function createInstance($clientOptions)
     {
+        AblyRest::setLibraryFlavourString('laravel');
+
         return new AblyRest($clientOptions);
     }
 }

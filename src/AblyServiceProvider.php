@@ -33,6 +33,8 @@ class AblyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('ably', function($app) {
+            AblyRest::setLibraryFlavourString('laravel');
+            
             return new AblyRest(config('ably'));
         });
     }
