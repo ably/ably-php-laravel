@@ -1,6 +1,6 @@
 {
     "name": "ably/ably-php-laravel",
-    "description": "Ably-PHP wrapper for Laravel",
+    "description": "Ably realtime REST PHP library wrapper for Laravel",
     "keywords": ["ably", "laravel", "rest", "messaging" ],
     "homepage": "https://www.ably.io/",
     "license": "Apache-2.0",
@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "ably/ably-php": "~0.9",
+        "ably/ably-php": "~1.0",
         "laravel/framework": ">=5.1.0"
     },
     "require-dev": {
