@@ -1,8 +1,8 @@
-#Ably PHP Laravel Wrapper
+# Ably PHP Laravel Wrapper
 
 This is a Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
 
-##Installation
+## Installation
 
 Add this package to your project, with [Composer](https://getcomposer.org/)
 
@@ -22,7 +22,7 @@ Optionally add a reference to the facade in `config/app.php` to the `aliases` ar
 'Ably' => Ably\Laravel\Facades\Ably::class
 ```
 
-##Configuration
+## Configuration
 
 After adding the service provider, run the following command to have Laravel set up a configuration file for you.
 
@@ -32,9 +32,9 @@ php artisan vendor:publish
 
 Update the created file `config/ably.php` with your key or [other options](https://www.ably.io/documentation/rest/usage#client-options). You can also set the key using an environment variable named `ABLY_KEY`.
 
-##Usage
+## Usage
 
-###Facade
+### Facade
 
 The facade always returns a singleton instance created with options defined in the config file. Any methods available on an AblyRest class are available through the facade. Note that properties must be called like functions (i.e. `Ably::auth()`), this is a limitation of PHP.
 
@@ -46,7 +46,7 @@ $token = Ably::auth()->requestToken([ 'clientId' => 'client123', ]); // Ably\Mod
 Ably::channel('testChannel')->publish('testEvent', 'testPayload', 'testClientId');
 ```
 
-###Dependency injection
+### Dependency injection
 
 You can use `Ably\Laravel\AblyService` instead of the facade, which acts as a 1:1 wrapper for an AblyRest singleton instance created with default options. `Ably\Laravel\AblyFactory` lets you instantiate new AblyRest instances with (optional) custom options.
 
@@ -65,7 +65,7 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 }
 ```
 
-##Documentation
+## Documentation
 
 Visit https://www.ably.io/documentation for a complete API reference and more examples.
 
