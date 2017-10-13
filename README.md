@@ -69,14 +69,15 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 
 Visit https://www.ably.io/documentation for a complete API reference and more examples.
 
-## Release notes
+## Release Process
 
 This library uses [semantic versioning](http://semver.org/). For each release, the following needs to be done:
 
 * Update the dependency on [ably-php](https://github.com/ably/ably-php) within [composer.json](./composer.json) to the latest version, commit this change and push to `origin`.
 * Add a tag and push to origin such as `git tag 1.0.0 && git push origin 1.0.0`.
+* Visit https://github.com/ably/ably-php-laravel/tags and add release notes for the release including links to the changelog entry.
 * Visit https://packagist.org/packages/ably/ably-php-laravel, log in to Packagist, and click the "Update" button.
 
 ## License
 
-Copyright (c) 2016 Ably Real-time Ltd, Licensed under the Apache License, Version 2.0.  Refer to [LICENSE](LICENSE) for the license terms.
+Copyright (c) 2017 Ably Real-time Ltd, Licensed under the Apache License, Version 2.0.  Refer to [LICENSE](LICENSE) for the license terms.
