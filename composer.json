@@ -36,7 +36,7 @@
                 "Ably\\Laravel\\AblyServiceProvider"
             ],
             "aliases": {
-                "Ably": "Ably\\Laravel\\Facades\Ably"
+                "Ably": "Ably\\Laravel\\Facades\\Ably"
             }
         }
     }
