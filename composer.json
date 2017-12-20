@@ -29,5 +29,15 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ably\\Laravel\\AblyServiceProvider"
+            ],
+            "aliases": {
+                "Ably": "Ably\\Laravel\\Facades\\Ably"
+            }
+        }
     }
 }
