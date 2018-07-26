@@ -37,6 +37,8 @@ class AblyServiceProvider extends ServiceProvider
             
             return new AblyRest(config('ably'));
         });
+        
+        $this->app->alias('ably', AblyRest::class);
     }
 
     /**
@@ -47,7 +49,8 @@ class AblyServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'ably'
+            'ably',
+            AblyRest::class,
         ];
     }
 }
