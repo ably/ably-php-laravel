@@ -1,5 +1,9 @@
 # Ably PHP Laravel Wrapper
 
+[![Latest Stable Version](https://poser.pugx.org/ably/ably-php-laravel/v/stable)](https://packagist.org/packages/ably/ably-php-laravel)
+[![Total Downloads](https://poser.pugx.org/ably/ably-php-laravel/downloads)](https://packagist.org/packages/ably/ably-php-laravel)
+[![License](https://poser.pugx.org/ably/ably-php-laravel/license)](https://packagist.org/packages/ably/ably-php-laravel)
+
 This is a Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
 
 ## Installation
