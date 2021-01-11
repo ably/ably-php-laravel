@@ -10,7 +10,7 @@ The PHP client library currently targets the [Ably 1.1 client library specificat
 
 ## Known Limitations
 
-Currently, this SDK only supports [Ably REST](https://www.ably.io/documentation/rest). However, you can use the [MQTT adapter](https://www.ably.io/documentation/mqtt) to implement [Ably's Realtime](https://www.ably.io/documentation/realtime) features using Python. 
+Currently, this SDK only supports [Ably REST](https://www.ably.io/documentation/rest). However, if you want to subscribe to events in PHP, you can use the [MQTT adapter](https://www.ably.io/documentation/mqtt) to implement [Ably's Realtime](https://www.ably.io/documentation/realtime) features in PHP. 
 
 This SDK is *not compatible* with some of the Ably features:
 
