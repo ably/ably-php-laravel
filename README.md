@@ -100,6 +100,7 @@ Visit https://www.ably.io/documentation for a complete API reference and more ex
 This library uses [semantic versioning](http://semver.org/). For each release, the following needs to be done:
 
 * Update the dependency on [ably-php](https://github.com/ably/ably-php) within [composer.json](./composer.json) to the latest version, commit this change and push to `origin`.
+* Run [`github_changelog_generator`](https://github.com/skywinder/Github-Changelog-Generator) to automate the update of the [CHANGELOG](./CHANGELOG.md). Once the `CHANGELOG` update has completed, manually change the `Unreleased` heading and link with the current version number such as `1.0.0`. Also ensure that the `Full Changelog` link points to the new version tag instead of the `HEAD`.
 * Add a tag and push to origin such as `git tag 1.0.0 && git push origin 1.0.0`.
 * Visit https://github.com/ably/ably-php-laravel/tags and add release notes for the release including links to the changelog entry.
 * Visit https://packagist.org/packages/ably/ably-php-laravel, log in to Packagist, and click the "Update" button.
