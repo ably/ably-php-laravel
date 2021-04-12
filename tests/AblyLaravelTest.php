@@ -5,7 +5,7 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
 {
     const TEST_KEY = 'unit.test:key';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

@@ -8,6 +8,15 @@ This is a Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ab
 
 The PHP client library currently targets the [Ably 1.1 client library specification](https://www.ably.io/documentation/client-lib-development-guide/features/). You can jump to the '[Known Limitations](#known-limitations)' section to see the features the PHP client library does not yet support or [view our client library SDKs feature support matrix](https://www.ably.io/download/sdk-feature-support-matrix) to see the list of all the available features.
 
+## Supported Platforms
+
+This SDK supports PHP 7.2+ and 8.0
+
+We regression-test the library against a selection of PHP versions (which will change over time, but usually consists of the versions that are supported upstream). Please refer to [the travis config](.travis.yml) for the set of versions that currently undergo CI testing.
+
+We'll happily support (and investigate reported problems with) any reasonably-widely-used PHP version.
+If you find any compatibility issues, please [do raise an issue](https://github.com/ably/ably-php-laravel/issues/new) in this repository or [contact Ably customer support](https://support.ably.io/) for advice.
+
 ## Known Limitations
 
 Currently, this SDK only supports [Ably REST](https://www.ably.io/documentation/rest). However, if you want to subscribe to events in PHP, you can use the [MQTT adapter](https://www.ably.io/documentation/mqtt) to implement [Ably's Realtime](https://www.ably.io/documentation/realtime) features in PHP. 
@@ -94,6 +103,7 @@ This library uses [semantic versioning](http://semver.org/). For each release, t
 * Add a tag and push to origin such as `git tag 1.0.0 && git push origin 1.0.0`.
 * Visit https://github.com/ably/ably-php-laravel/tags and add release notes for the release including links to the changelog entry.
 * Visit https://packagist.org/packages/ably/ably-php-laravel, log in to Packagist, and click the "Update" button.
+
 
 ## License
 
