@@ -25,10 +25,7 @@
         }
     },
     "config": {
-        "preferred-install": "dist",
-        "allow-plugins": {
-            "kylekatarnls/update-helper": true
-        }
+        "preferred-install": "dist"
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
