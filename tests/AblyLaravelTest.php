@@ -1,4 +1,6 @@
 <?php
+
+use Ably\AblyRest;
 use Ably\Http;
 
 class AblyLaravelTest extends Orchestra\Testbench\TestCase
@@ -140,7 +142,8 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
         ]);
 
         $ably->time();
-        $this->assertRegExp('/php-laravel-[0-9]+\.[0-9]+\.[0-9]+/', $ably->http->lastHeaders['X-Ably-Lib']);
+        $expectedLaravelHeader = 'X-Ably-Lib: php-laravel-'.AblyRest::LIB_VERSION;
+        $this->assertcontains( $expectedLaravelHeader, $ably->http->lastHeaders, 'Expected PHP laravel header in HTTP request' );
     }
 }
 
