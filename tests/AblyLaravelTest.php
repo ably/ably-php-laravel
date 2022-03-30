@@ -2,6 +2,7 @@
 
 use Ably\AblyRest;
 use Ably\Http;
+use Ably\Utils\Miscellaneous;
 
 class AblyLaravelTest extends Orchestra\Testbench\TestCase
 {
@@ -133,7 +134,7 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
         $this->assertInstanceOf(\Ably\Auth::class, $factoryInstanceAuth2);
     }
 
-    public function testAblyFlavourString()
+    public function testLaravelAblyAgentHeader()
     {
         $ablyFactory = App::make('\Ably\Laravel\AblyFactory');
         $ably = $ablyFactory->make([
@@ -142,8 +143,8 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
         ]);
 
         $ably->time();
-        $expectedLaravelHeader = 'X-Ably-Lib: php-laravel/'.app()->version().'-'.AblyRest::LIB_VERSION;
-        $this->assertcontains( $expectedLaravelHeader, $ably->http->lastHeaders, 'Expected PHP laravel header in HTTP request' );
+        $expectedLaravelHeader = 'ably-php/'.AblyRest::LIB_VERSION.' '.'php/'.Miscellaneous::getNumeric(phpversion()).' laravel/'.app()->version();
+        $this->assertcontains( 'Ably-Agent: '.$expectedLaravelHeader, $ably->http->lastHeaders, 'Expected PHP laravel header in HTTP request' );
     }
 }
 
