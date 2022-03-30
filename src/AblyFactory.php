@@ -34,8 +34,8 @@ class AblyFactory
      */
     protected function createInstance($clientOptions)
     {
-        AblyRest::setLibraryFlavourString('laravel');
-
+        $laravelVersion = app()->version();
+        AblyRest::setLibraryFlavourString('laravel/'.$laravelVersion);
         return new AblyRest($clientOptions);
     }
 }
