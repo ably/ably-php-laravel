@@ -31,11 +31,12 @@ class AblyFactory
      * @param array|null $clientOptions
      *
      * @return \Ably\AblyRest
+     * @throws \Ably\Exceptions\AblyException
      */
     protected function createInstance($clientOptions)
     {
         $laravelVersion = app()->version();
-        AblyRest::setLibraryFlavourString('laravel/'.$laravelVersion);
+        AblyRest::setAblyAgentHeader('laravel', $laravelVersion);
         return new AblyRest($clientOptions);
     }
 }

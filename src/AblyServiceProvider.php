@@ -34,7 +34,7 @@ class AblyServiceProvider extends ServiceProvider
     {
         $this->app->singleton('ably', function($app) {
             $laravelVersion = app()->version();
-            AblyRest::setLibraryFlavourString('laravel/'.$laravelVersion);
+            AblyRest::setAblyAgentHeader('laravel', $laravelVersion);
             return new AblyRest(config('ably'));
         });
     }
