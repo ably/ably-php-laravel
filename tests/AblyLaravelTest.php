@@ -142,7 +142,7 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
         ]);
 
         $ably->time();
-        $expectedLaravelHeader = 'X-Ably-Lib: php-laravel-'.AblyRest::LIB_VERSION;
+        $expectedLaravelHeader = 'X-Ably-Lib: php-laravel/'.app()->version().'-'.AblyRest::LIB_VERSION;
         $this->assertcontains( $expectedLaravelHeader, $ably->http->lastHeaders, 'Expected PHP laravel header in HTTP request' );
     }
 }
