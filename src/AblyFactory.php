@@ -2,6 +2,7 @@
 namespace Ably\Laravel;
 
 use Ably\AblyRest;
+use Ably\Utils\Miscellaneous;
 
 /**
  * Instantiates AblyRest objects
@@ -35,7 +36,7 @@ class AblyFactory
      */
     protected function createInstance($clientOptions)
     {
-        $laravelVersion = app()->version();
+        $laravelVersion = Miscellaneous::getNumeric(app()->version());
         AblyRest::setAblyAgentHeader('laravel', $laravelVersion);
         return new AblyRest($clientOptions);
     }

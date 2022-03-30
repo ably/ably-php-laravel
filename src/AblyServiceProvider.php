@@ -2,6 +2,7 @@
 namespace Ably\Laravel;
 
 use Ably\AblyRest;
+use Ably\Utils\Miscellaneous;
 use Illuminate\Support\ServiceProvider;
 
 class AblyServiceProvider extends ServiceProvider
@@ -33,7 +34,7 @@ class AblyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('ably', function($app) {
-            $laravelVersion = app()->version();
+            $laravelVersion = Miscellaneous::getNumeric(app()->version());
             AblyRest::setAblyAgentHeader('laravel', $laravelVersion);
             return new AblyRest(config('ably'));
         });
