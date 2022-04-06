@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/ably/ably-php-laravel/tree/1.0.5)
+
+[Full Changelog](https://github.com/ably/ably-php-laravel/compare/1.0.4...1.0.5)
+
+- Updates the underlying ably-php version to 1.1.6
+- Adds support for Ably-Agent header [/#17](https://github.com/ably/ably-php-laravel/pull/17)
+
 ## [1.0.4](https://github.com/ably/ably-php-laravel/tree/1.0.4)
 
 [Full Changelog](https://github.com/ably/ably-php-laravel/compare/1.0.3...1.0.4)
