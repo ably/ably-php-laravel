@@ -2,12 +2,12 @@
     "name": "ably/ably-php-laravel",
     "description": "Ably realtime REST PHP library wrapper for Laravel",
     "keywords": ["ably", "laravel", "rest", "messaging" ],
-    "homepage": "https://www.ably.io/",
+    "homepage": "https://www.ably.com/",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Ably",
-            "email": "support@ably.io"
+            "email": "support@ably.com"
         }
     ],
     "require": {

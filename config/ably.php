@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 |
 | You may use any of the ClientOptions here.
-| See the complete list here: https://www.ably.io/documentation/rest/usage#client-options
+| See the complete list here: https://www.ably.com/documentation/rest/usage#client-options
 |
 | A key or any other valid means of authenticating is required.
 */
