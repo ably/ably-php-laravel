@@ -66,7 +66,7 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
      */
     public function testFacade()
     {
-        $this->assertGreaterThan(0, Ably::systemTime()); // verify that function calls work
+        $this->assertGreaterThan(0, Miscellaneous::systemTime()); // verify that function calls work
         
         $this->assertInstanceOf(\Ably\Auth::class, Ably::auth()); // verify that accessing members as function calls works
 
@@ -96,7 +96,7 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
         $ably = App::make('\Ably\Laravel\AblyService');
         $this->assertInstanceOf(\Ably\Laravel\AblyService::class, $ably);
 
-        $this->assertGreaterThan(0, $ably->systemTime()); // verify that function calls work
+        $this->assertGreaterThan(0, Miscellaneous::systemTime()); // verify that function calls work
 
         $this->assertInstanceOf(\Ably\Auth::class, $ably->auth); // verify that accessing members works
         
@@ -143,7 +143,7 @@ class AblyLaravelTest extends Orchestra\Testbench\TestCase
         ]);
 
         $ably->time();
-        $expectedLaravelHeader = 'ably-php/'.AblyRest::LIB_VERSION.' '.'php/'.Miscellaneous::getNumeric(phpversion()).' laravel/'.app()->version();
+        $expectedLaravelHeader = 'ably-php/'.\Ably\Defaults::LIB_VERSION.' '.'php/'.Miscellaneous::getNumeric(phpversion()).' laravel/'.app()->version();
         $this->assertcontains( 'Ably-Agent: '.$expectedLaravelHeader, $ably->http->lastHeaders, 'Expected PHP laravel header in HTTP request' );
     }
 }
