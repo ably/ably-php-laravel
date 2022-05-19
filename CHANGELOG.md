@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.6](https://github.com/ably/ably-php-laravel/tree/1.0.6)
+[Full Changelog](https://github.com/ably/ably-php-laravel/compare/1.0.5...1.0.6)
+
+- Updates the underlying ably-php version to 1.1.7
+- Updates outdated URLs in README [/#21](https://github.com/ably/ably-php-laravel/pull/21)
+
 ## [1.0.5](https://github.com/ably/ably-php-laravel/tree/1.0.5)
 
 [Full Changelog](https://github.com/ably/ably-php-laravel/compare/1.0.4...1.0.5)
