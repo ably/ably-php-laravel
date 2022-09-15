@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.8](https://github.com/ably/ably-php-laravel/tree/1.0.8)
+
+[Full Changelog](https://github.com/ably/ably-php-laravel/compare/1.0.7...1.0.8)
+
+- Updates the underlying ably-php version to 1.1.9 (adds support for PHP 8.2)
+
 ## [1.0.7](https://github.com/ably/ably-php-laravel/tree/1.0.7)
 [Full Changelog](https://github.com/ably/ably-php-laravel/compare/1.0.6...1.0.7)
 
