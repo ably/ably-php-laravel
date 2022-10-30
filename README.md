@@ -6,7 +6,7 @@
 
 _[Ably](https://ably.com) is the platform that powers synchronized digital experiences in realtime. Whether attending an event in a virtual venue, receiving realtime financial information, or monitoring live car performance data – consumers simply expect realtime digital experiences as standard. Ably provides a suite of APIs to build, extend, and deliver powerful digital experiences in realtime for more than 250 million devices across 80 countries each month. Organizations like Bloomberg, HubSpot, Verizon, and Hopin depend on Ably’s platform to offload the growing complexity of business-critical realtime data synchronization at global scale. For more information, see the [Ably documentation](https://ably.com/docs)._
 
-This is a simple Laravel wrapper for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
+This is a simple Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
 
 The PHP client library currently targets the [Ably 1.1 client library specification](https://www.ably.com/docs/client-lib-development-guide/features/). You can jump to the '[Known Limitations](#known-limitations)' section to see the features the PHP client library does not yet support or [view our client library SDKs feature support matrix](https://www.ably.com/download/sdk-feature-support-matrix) to see the list of all the available features.
 
@@ -107,11 +107,15 @@ Visit https://www.ably.com/docs for a complete API reference and more examples.
 
 This library uses [semantic versioning](http://semver.org/). For each release, the following needs to be done:
 
-* Update the dependency on [ably-php](https://github.com/ably/ably-php) within [composer.json](./composer.json) to the latest version, commit this change and push to `origin`.
-* Run [`github_changelog_generator`](https://github.com/skywinder/Github-Changelog-Generator) to automate the update of the [CHANGELOG](./CHANGELOG.md). Once the `CHANGELOG` update has completed, manually change the `Unreleased` heading and link with the current version number such as `1.0.0`. Also ensure that the `Full Changelog` link points to the new version tag instead of the `HEAD`.
-* Add a tag and push to origin such as `git tag 1.0.0 && git push origin 1.0.0`.
-* Visit https://github.com/ably/ably-php-laravel/tags and add release notes for the release including links to the changelog entry.
-* Visit https://packagist.org/packages/ably/ably-php-laravel, log in to Packagist, and click the "Update" button.
+1. Update the dependency on [ably-php](https://github.com/ably/ably-php) within [composer.json](./composer.json) to the latest version, commit this change and push to `origin`.
+2. Create a new branch for the release, named like `release/1.0.0` (where `1.0.0` is what you're releasing, being the new version).
+3. Run [`github_changelog_generator`](https://github.com/skywinder/Github-Changelog-Generator) to automate the update of the [CHANGELOG](./CHANGELOG.md). Once the `CHANGELOG` update has completed, manually change the `Unreleased` heading and link with the current version number such as `1.0.0`. Also ensure that the `Full Changelog` link points to the new version tag instead of the `HEAD`.
+4. Commit generated [CHANGELOG.md](./CHANGELOG.md) file.
+5. Make a PR against `main`.
+6. Once the PR is approved, merge it into `main`.
+7. Add a tag and push to origin such as `git tag 1.0.0 && git push origin 1.0.0`.
+8. Visit https://github.com/ably/ably-php-laravel/tags and add release notes for the release including links to the changelog entry.
+9. Visit https://packagist.org/packages/ably/ably-php-laravel, log in to Packagist, and click the "Update" button.
 
 
 ## License
