@@ -1,4 +1,4 @@
-# Ably PHP Laravel Wrapper
+# Simple Ably-PHP Laravel Wrapper
 
 [![Latest Stable Version](https://poser.pugx.org/ably/ably-php-laravel/v/stable)](https://packagist.org/packages/ably/ably-php-laravel)
 [![Total Downloads](https://poser.pugx.org/ably/ably-php-laravel/downloads)](https://packagist.org/packages/ably/ably-php-laravel)
@@ -6,7 +6,7 @@
 
 _[Ably](https://ably.com) is the platform that powers synchronized digital experiences in realtime. Whether attending an event in a virtual venue, receiving realtime financial information, or monitoring live car performance data – consumers simply expect realtime digital experiences as standard. Ably provides a suite of APIs to build, extend, and deliver powerful digital experiences in realtime for more than 250 million devices across 80 countries each month. Organizations like Bloomberg, HubSpot, Verizon, and Hopin depend on Ably’s platform to offload the growing complexity of business-critical realtime data synchronization at global scale. For more information, see the [Ably documentation](https://ably.com/docs)._
 
-This is a Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
+This is a simple Laravel wrapper for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
 
 The PHP client library currently targets the [Ably 1.1 client library specification](https://www.ably.com/docs/client-lib-development-guide/features/). You can jump to the '[Known Limitations](#known-limitations)' section to see the features the PHP client library does not yet support or [view our client library SDKs feature support matrix](https://www.ably.com/download/sdk-feature-support-matrix) to see the list of all the available features.
 
@@ -19,9 +19,15 @@ We regression-test the library against a selection of PHP versions (which will c
 We'll happily support (and investigate reported problems with) any reasonably-widely-used PHP version.
 If you find any compatibility issues, please [do raise an issue](https://github.com/ably/ably-php-laravel/issues/new) in this repository or [contact Ably customer support](https://support.ably.com/) for advice.
 
+## Note
+
+If you're using Laravel and want to support **realtime broadcasting and events**, you may want to check out [laravel-broadcaster](https://packagist.org/packages/ably/laravel-broadcaster/).
+
 ## Known Limitations
 
-Currently, this SDK only supports [Ably REST](https://www.ably.com/docs/rest). However, if you want to subscribe to events in PHP, you can use the [MQTT adapter](https://www.ably.com/docs/mqtt) to implement [Ably's Realtime](https://www.ably.com/docs/realtime) features in PHP. 
+- Currently, this SDK only supports [Ably REST](https://www.ably.com/docs/rest). However, if you want to subscribe to events in PHP, you can use the [MQTT adapter](https://www.ably.com/docs/mqtt) to implement [Ably's Realtime](https://www.ably.com/docs/realtime) features in PHP. 
+
+- This wrapper has limited usecases and [laravel-brodcaster](https://github.com/ably/laravel-broadcaster) is recommended for most cases.
 
 This SDK is *not compatible* with some of the Ably features:
 
