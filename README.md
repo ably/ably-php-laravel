@@ -30,7 +30,7 @@ If you're using Laravel and want to support **realtime broadcasting and events**
 
 - Currently, this SDK only supports [Ably REST](https://www.ably.com/docs/rest). However, if you want to subscribe to events in PHP, you can use the [MQTT adapter](https://www.ably.com/docs/mqtt) to implement [Ably's Realtime](https://www.ably.com/docs/realtime) features in PHP. 
 
-- This wrapper has limited usecases and [laravel-brodcaster](https://github.com/ably/laravel-broadcaster) is recommended for most cases.
+- This wrapper has limited use-cases and [laravel-broadcaster](https://github.com/ably/laravel-broadcaster) is recommended for most cases.
 
 This SDK is *not compatible* with some of the Ably features:
 
