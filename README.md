@@ -45,19 +45,6 @@ The PHP client library currently targets the [Ably 1.1 client library specificat
 
 ---
 
-## Known Limitations
-
-- Currently, this SDK only supports [Ably REST](https://www.ably.com/docs/rest). However, if you want to subscribe to events in PHP, you can use the [MQTT adapter](https://www.ably.com/docs/mqtt) to implement [Ably's Realtime](https://www.ably.com/docs/realtime) features in PHP. 
-
-- This wrapper has limited use-cases and [laravel-broadcaster](https://github.com/ably/laravel-broadcaster) is recommended for most cases.
-
-This SDK is *not compatible* with some of the Ably features:
-
-| Feature |
-| --- |
-| [Remember fallback host during failures](https://www.ably.com/docs/realtime/usage#client-options) |
-| [MsgPack Binary Protocol](https://www.ably.com/docs/realtime/usage#client-options) |
-
 ## Installation
 
 Add this package to your project, with [Composer](https://getcomposer.org/)
