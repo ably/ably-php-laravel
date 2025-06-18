@@ -78,7 +78,7 @@ Update the created file `config/ably.php` with your key or [other options](https
 
 ### Facade
 
-Use the Laravel facade for to access to the Ably client.
+Use the Laravel facade to access to the Ably client.
 
 <details>
 <summary>Facade usage details.</summary>
@@ -96,6 +96,11 @@ Ably::channel('testChannel')->publish('testEvent', 'testPayload', 'testClientId'
 
 ### Dependency injection
 
+Use the dependency injection to access to the Ably client.
+
+<details>
+<summary>Dependency injection usage details.</summary>
+
 You can use `Ably\Laravel\AblyService` instead of the facade, which acts as a 1:1 wrapper for an AblyRest singleton instance created with default options. `Ably\Laravel\AblyFactory` lets you instantiate new AblyRest instances with (optional) custom options.
 
 ```php
@@ -112,6 +117,7 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 	echo $ablyClient->auth->clientId; // 'client123'
 }
 ```
+</details>
 
 ## Documentation
 
