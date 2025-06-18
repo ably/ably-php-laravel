@@ -126,3 +126,9 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 The [CHANGELOG.md](/ably/ably-php-laravel/blob/main/CONTRIBUTING.md) contains details of the latest releases for this SDK. You can also view all Ably releases on [changelog.ably.com](https://changelog.ably.com).
 
 ---
+
+## Contributing
+
+Read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines to contribute to Ably.
+
+---
