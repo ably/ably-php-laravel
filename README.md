@@ -120,8 +120,3 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 </details>
 
 ---
-
-
-## License
-
-Copyright (c) 2022 Ably Real-time Ltd, Licensed under the Apache License, Version 2.0.  Refer to [LICENSE](LICENSE) for the license terms.
