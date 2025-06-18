@@ -119,9 +119,7 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 ```
 </details>
 
-## Documentation
-
-Visit https://www.ably.com/docs for a complete API reference and more examples.
+---
 
 ## Release Process
 
