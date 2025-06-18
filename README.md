@@ -76,11 +76,14 @@ php artisan vendor:publish
 
 Update the created file `config/ably.php` with your key or [other options](https://www.ably.com/docs/rest/usage#client-options). You can also set the key using an environment variable named `ABLY_KEY`.
 
-## Usage
-
 ### Facade
 
-The facade always returns a singleton instance created with options defined in the config file. Any methods available on an AblyRest class are available through the facade. Note that properties must be called like functions (i.e. `Ably::auth()`), this is a limitation of PHP.
+Use the Laravel facade for to access to the Ably client.
+
+<details>
+<summary>Facade usage details.</summary>
+
+The facade always returns a singleton instance created with options defined in the config file. Any methods available on an AblyRest class are available through the facade. Due to PHP limitations, properties must be accessed as methods, for example `Ably::auth()`):
 
 ```php
 use Ably;
@@ -89,6 +92,7 @@ echo Ably::time(); // 1467884220000
 $token = Ably::auth()->requestToken([ 'clientId' => 'client123', ]); // Ably\Models\TokenDetails
 Ably::channel('testChannel')->publish('testEvent', 'testPayload', 'testClientId');
 ```
+</details>
 
 ### Dependency injection
 
