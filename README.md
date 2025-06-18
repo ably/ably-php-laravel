@@ -4,14 +4,18 @@
 
 ---
 
-> **Warning** </br>
-> If you're using Laravel and want to support **realtime broadcasting and events**, it is recommended to use [ably/laravel-broadcaster](https://packagist.org/packages/ably/laravel-broadcaster/) instead.
+# Ably Pub/Sub PHP Laravel SDK
 
-_[Ably](https://ably.com) is the platform that powers synchronized digital experiences in realtime. Whether attending an event in a virtual venue, receiving realtime financial information, or monitoring live car performance data – consumers simply expect realtime digital experiences as standard. Ably provides a suite of APIs to build, extend, and deliver powerful digital experiences in realtime for more than 250 million devices across 80 countries each month. Organizations like Bloomberg, HubSpot, Verizon, and Hopin depend on Ably’s platform to offload the growing complexity of business-critical realtime data synchronization at global scale. For more information, see the [Ably documentation](https://ably.com/docs)._
+Build any realtime experience using Ably’s Pub/Sub PHP Laravel SDK, supported on all popular platforms and frameworks.
 
-This is a simple Laravel wrapper / bridge for the [Ably PHP](https://github.com/ably/ably-php) library. It provides a Facade and an injectable AblyService that both act as a wrapper for a singleton Ably instance. The instance gets its parameters automatically from your config file or environment variables. You can also use AblyFactory for creating new Ably instances with (optional) custom parameters.
+Ably Pub/Sub provides flexible APIs that deliver features such as pub-sub messaging, message history, presence, and push notifications. Utilizing Ably’s realtime messaging platform, applications benefit from its highly performant, reliable, and scalable infrastructure.
 
-The PHP client library currently targets the [Ably 1.1 client library specification](https://www.ably.com/docs/client-lib-development-guide/features/). You can jump to the '[Known Limitations](#known-limitations)' section to see the features the PHP client library does not yet support or [view our client library SDKs feature support matrix](https://www.ably.com/download/sdk-feature-support-matrix) to see the list of all the available features.
+Find out more:
+
+* [Ably Pub/Sub docs.](https://ably.com/docs/basics)
+* [Ably Pub/Sub examples.](https://ably.com/examples?product=pubsub)
+
+---
 
 ## Getting started
 
