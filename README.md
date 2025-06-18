@@ -25,7 +25,7 @@ Everything you need to get started with Ably:
 
 ---
 
-## Supported Platforms
+## Supported platforms
 
 Ably aims to support a wide range of platforms. If you experience any compatibility issues, open an issue in the repository or contact [Ably support](https://ably.com/support).
 
@@ -132,3 +132,18 @@ The [CHANGELOG.md](/ably/ably-php-laravel/blob/main/CONTRIBUTING.md) contains de
 Read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines to contribute to Ably.
 
 ---
+
+## Support, Feedback, and Troubleshooting
+
+For help or technical support, visit the [Ably Support page](https://ably.com/support).
+
+### Ably REST API
+
+This SDK currently supports only the [Ably REST API](https://www.ably.com/docs/rest). If you need to subscribe to realtime events in PHP, consider using the [MQTT adapter](https://www.ably.com/docs/mqtt) to leverage [Ably's Realtime features](https://www.ably.com/docs/realtime).
+
+### Unsupported features
+
+The following features are not supported by this SDK:
+
+- [Remember fallback host during failures.](https://www.ably.com/docs/realtime/usage#client-options)
+- [MsgPack Binary Protocol.](https://www.ably.com/docs/realtime/usage#client-options)
