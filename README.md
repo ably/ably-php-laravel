@@ -13,6 +13,14 @@ This is a simple Laravel wrapper / bridge for the [Ably PHP](https://github.com/
 
 The PHP client library currently targets the [Ably 1.1 client library specification](https://www.ably.com/docs/client-lib-development-guide/features/). You can jump to the '[Known Limitations](#known-limitations)' section to see the features the PHP client library does not yet support or [view our client library SDKs feature support matrix](https://www.ably.com/download/sdk-feature-support-matrix) to see the list of all the available features.
 
+## Getting started
+
+Everything you need to get started with Ably:
+
+- [Quickstart in Pub/Sub using PHP.](https://ably.com/docs/getting-started/quickstart?lang=php)
+
+---
+
 ## Supported Platforms
 
 This SDK supports PHP 7.2+ and 8.0
