@@ -1,8 +1,8 @@
-# Ably PHP Laravel Wrapper
+![Ably Pub/Sub PHP Laravel Header](images/LaraVELSDK-github.png)
+![Latest Stable Version](https://poser.pugx.org/ably/ably-php-laravel/v/stable)
+![License](https://poser.pugx.org/ably/ably-php-laravel/license)
 
-[![Latest Stable Version](https://poser.pugx.org/ably/ably-php-laravel/v/stable)](https://packagist.org/packages/ably/ably-php-laravel)
-[![Total Downloads](https://poser.pugx.org/ably/ably-php-laravel/downloads)](https://packagist.org/packages/ably/ably-php-laravel)
-[![License](https://poser.pugx.org/ably/ably-php-laravel/license)](https://packagist.org/packages/ably/ably-php-laravel)
+---
 
 > **Warning** </br>
 > If you're using Laravel and want to support **realtime broadcasting and events**, it is recommended to use [ably/laravel-broadcaster](https://packagist.org/packages/ably/laravel-broadcaster/) instead.
