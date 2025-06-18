@@ -27,16 +27,23 @@ Everything you need to get started with Ably:
 
 ## Supported Platforms
 
-This SDK supports PHP 7.2+ and 8.0
+Ably aims to support a wide range of platforms. If you experience any compatibility issues, open an issue in the repository or contact [Ably support](https://ably.com/support).
 
-We regression-test the library against a selection of PHP versions (which will change over time, but usually consists of the versions that are supported upstream). Please refer to [the travis config](.travis.yml) for the set of versions that currently undergo CI testing.
+This SDK supports the following platforms:
 
-We'll happily support (and investigate reported problems with) any reasonably-widely-used PHP version.
-If you find any compatibility issues, please [do raise an issue](https://github.com/ably/ably-php-laravel/issues/new) in this repository or [contact Ably customer support](https://support.ably.com/) for advice.
+| Platform | Support |
+|----------|---------|
+| PHP      | >= 7.2, including PHP 8.0+. See [`.travis.yml`](./.travis.yml) for tested versions. |
 
-## Note
+The PHP client library currently targets the [Ably 1.1 client library specification](https://www.ably.com/docs/client-lib-development-guide/features/).
 
-If you're using Laravel and want to support **realtime broadcasting and events**, you may want to check out [laravel-broadcaster](https://packagist.org/packages/ably/laravel-broadcaster/).
+> [!NOTE]
+> See [laravel-broadcaster](https://packagist.org/packages/ably/laravel-broadcaster/), if you're using Laravel and want to support Realtime broadcasting and events.
+
+> [!IMPORTANT]
+> PHP SDK versions < 1.1.9 will be [deprecated](https://ably.com/docs/platform/deprecate/protocol-v1) from November 1, 2025.
+
+---
 
 ## Known Limitations
 
