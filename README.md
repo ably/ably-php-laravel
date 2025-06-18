@@ -121,20 +121,6 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 
 ---
 
-## Release Process
-
-This library uses [semantic versioning](http://semver.org/). For each release, the following needs to be done:
-
-1. Update the dependency on [ably-php](https://github.com/ably/ably-php) within [composer.json](./composer.json) to the latest version, commit this change and push to `origin`.
-2. Create a new branch for the release, named like `release/1.0.0` (where `1.0.0` is what you're releasing, being the new version).
-3. Run [`github_changelog_generator`](https://github.com/skywinder/Github-Changelog-Generator) to automate the update of the [CHANGELOG](./CHANGELOG.md). Once the `CHANGELOG` update has completed, manually change the `Unreleased` heading and link with the current version number such as `1.0.0`. Also ensure that the `Full Changelog` link points to the new version tag instead of the `HEAD`.
-4. Commit generated [CHANGELOG.md](./CHANGELOG.md) file.
-5. Make a PR against `main`.
-6. Once the PR is approved, merge it into `main`.
-7. Add a tag and push to origin such as `git tag 1.0.0 && git push origin 1.0.0`.
-8. Visit https://github.com/ably/ably-php-laravel/tags and add release notes for the release including links to the changelog entry.
-9. Visit https://packagist.org/packages/ably/ably-php-laravel, log in to Packagist, and click the "Update" button.
-
 
 ## License
 
