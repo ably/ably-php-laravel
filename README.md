@@ -47,7 +47,7 @@ The PHP client library currently targets the [Ably 1.1 client library specificat
 
 ## Installation
 
-Add this package to your project, with [Composer](https://getcomposer.org/)
+Install the package using [Composer](https://getcomposer.org/):
 
 ```bash
 composer require ably/ably-php-laravel
@@ -64,10 +64,11 @@ Optionally add a reference to the facade in `config/app.php` to the `aliases` ar
 ```php
 'Ably' => Ably\Laravel\Facades\Ably::class
 ```
+---
 
 ## Configuration
 
-After adding the service provider, run the following command to have Laravel set up a configuration file for you.
+After registering the service provider, publish the configuration file using Artisan:
 
 ```bash
 php artisan vendor:publish
