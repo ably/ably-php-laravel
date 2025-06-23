@@ -1,12 +1,14 @@
 ![Ably Pub/Sub PHP Laravel Header](images/LaraVELSDK-github.png)
-![Latest Stable Version](https://poser.pugx.org/ably/ably-php-laravel/v/stable)
-![License](https://poser.pugx.org/ably/ably-php-laravel/license)
+[![Latest Stable Version](https://poser.pugx.org/ably/ably-php-laravel/v/stable)](https://packagist.org/packages/ably/ably-php-laravel)
+[![License](https://poser.pugx.org/ably/ably-php-laravel/license)](https://github.com/ably/ably-php-laravel/blob/main/LICENSE)
 
 ---
 
 # Ably Pub/Sub PHP Laravel SDK
 
-Build any realtime experience using Ably’s Pub/Sub PHP Laravel SDK, supported on all popular platforms and frameworks.
+Build using Ably’s Pub/Sub PHP Laravel SDK, supported on all popular platforms and frameworks.
+
+This Laravel package provides a clean integration with the [Ably PHP](https://github.com/ably/ably-php) SDK. It includes a Facade and an injectable `AblyService` that wrap a singleton Ably instance, with configuration automatically loaded from your environment variables or config files. Additionally, the `AblyFactory` class lets you create new Ably instances with custom parameters when needed.
 
 Ably Pub/Sub provides flexible APIs that deliver features such as pub-sub messaging, message history, presence, and push notifications. Utilizing Ably’s realtime messaging platform, applications benefit from its highly performant, reliable, and scalable infrastructure.
 
@@ -21,19 +23,14 @@ Find out more:
 
 Everything you need to get started with Ably:
 
-- [Quickstart in Pub/Sub using PHP.](https://ably.com/docs/getting-started/quickstart?lang=php)
+* [Getting started in Pub/Sub using PHP.](https://ably.com/docs/getting-started/php?lang=php)
+* [SDK Setup for PHP.](https://ably.com/docs/getting-started/setup?lang=php)
 
 ---
 
 ## Supported platforms
 
 Ably aims to support a wide range of platforms. If you experience any compatibility issues, open an issue in the repository or contact [Ably support](https://ably.com/support).
-
-This SDK supports the following platforms:
-
-| Platform | Support |
-|----------|---------|
-| PHP      | >= 7.2, including PHP 8.0+. See [`.travis.yml`](./.travis.yml) for tested versions. |
 
 The PHP client library currently targets the [Ably 1.1 client library specification](https://www.ably.com/docs/client-lib-development-guide/features/).
 
@@ -66,7 +63,7 @@ Optionally add a reference to the facade in `config/app.php` to the `aliases` ar
 ```
 ---
 
-## Configuration
+### Configuration
 
 After registering the service provider, publish the configuration file using Artisan:
 
@@ -76,9 +73,13 @@ php artisan vendor:publish
 
 Update the created file `config/ably.php` with your key or [other options](https://www.ably.com/docs/rest/usage#client-options). You can also set the key using an environment variable named `ABLY_KEY`.
 
-### Facade
+## Usage
 
-Use the Laravel facade to access to the Ably client.
+The following sections demonstrates two ways to use Ably in Laravel: via a [Facade](#facade) or through [dependency injection](#dependency-injection).
+
+## Facade
+
+Use the Laravel facade to access the Ably client.
 
 <details>
 <summary>Facade usage details.</summary>
@@ -94,9 +95,9 @@ Ably::channel('testChannel')->publish('testEvent', 'testPayload', 'testClientId'
 ```
 </details>
 
-### Dependency injection
+## Dependency injection
 
-Use the dependency injection to access to the Ably client.
+Use the dependency injection to access the Ably client.
 
 <details>
 <summary>Dependency injection usage details.</summary>
@@ -123,7 +124,7 @@ function ablyExamples(AblyService $ably, AblyFactory $ablyFactory) {
 
 ## Releases
 
-The [CHANGELOG.md](/ably/ably-php-laravel/blob/main/CONTRIBUTING.md) contains details of the latest releases for this SDK. You can also view all Ably releases on [changelog.ably.com](https://changelog.ably.com).
+The [CHANGELOG.md](CHANGELOG.md) contains details of the latest releases for this SDK. You can also view all Ably releases on [changelog.ably.com](https://changelog.ably.com).
 
 ---
 
@@ -133,7 +134,7 @@ Read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines to contribute to Ably.
 
 ---
 
-## Support, Feedback, and Troubleshooting
+## Support, feedback, and troubleshooting
 
 For help or technical support, visit the [Ably Support page](https://ably.com/support).
 
