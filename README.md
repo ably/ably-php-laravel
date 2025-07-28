@@ -10,6 +10,8 @@ Build using Ably’s Pub/Sub PHP Laravel SDK, supported on all popular platforms
 
 This Laravel package provides a clean integration with the [Ably PHP](https://github.com/ably/ably-php) SDK. It includes a Facade and an injectable `AblyService` that wrap a singleton Ably instance, with configuration automatically loaded from your environment variables or config files. Additionally, the `AblyFactory` class lets you create new Ably instances with custom parameters when needed.
 
+This SDK provides REST-only functionality for Laravel. For full-featured Laravel integration including real-time capabilities, Ably recommend using [Ably's Laravel Broadcaster](https://github.com/ably/laravel-broadcaster).
+
 Ably Pub/Sub provides flexible APIs that deliver features such as pub-sub messaging, message history, presence, and push notifications. Utilizing Ably’s realtime messaging platform, applications benefit from its highly performant, reliable, and scalable infrastructure.
 
 Find out more:
@@ -141,10 +143,3 @@ For help or technical support, visit the [Ably Support page](https://ably.com/su
 ### Ably REST API
 
 This SDK currently supports only the [Ably REST API](https://www.ably.com/docs/rest). If you need to subscribe to realtime events in PHP, consider using the [MQTT adapter](https://www.ably.com/docs/mqtt) to leverage [Ably's Realtime features](https://www.ably.com/docs/realtime).
-
-### Unsupported features
-
-The following features are not supported by this SDK:
-
-- [Remember fallback host during failures.](https://www.ably.com/docs/realtime/usage#client-options)
-- [MsgPack Binary Protocol.](https://www.ably.com/docs/realtime/usage#client-options)
