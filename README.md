@@ -1,4 +1,4 @@
-![Ably Pub/Sub PHP Laravel Header](images/LaraVELSDK-github.png)
+![Ably Pub/Sub PHP Laravel Header](images/LaravelSDK-github.png)
 [![Latest Stable Version](https://poser.pugx.org/ably/ably-php-laravel/v/stable)](https://packagist.org/packages/ably/ably-php-laravel)
 [![License](https://poser.pugx.org/ably/ably-php-laravel/license)](https://github.com/ably/ably-php-laravel/blob/main/LICENSE)
 
