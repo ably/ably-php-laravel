@@ -7,8 +7,12 @@ on:
     branches:
       - main
 
+permissions: {}
+
 jobs:
   check:
+    permissions:
+      contents: read
 
     runs-on: ubuntu-latest
     strategy:
